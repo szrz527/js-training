@@ -39,6 +39,14 @@
         return num;
     }
 
+    function korkerulet(num){
+        return num * 2 * Math.PI;
+    }
+
+    function korterulet(num) {
+        return squared(num) * Math.PI;
+    }
+
     input.addEventListener('change', () => {
         const num = parseFloat(input.value);
         if (isNaN(num)) {
@@ -47,6 +55,8 @@
             para.textContent = `${num} squared is ${squared(num)}. `;
             para.textContent += `${num} cubed is ${cubed(num)}. `;
             para.textContent += `${num} factorial is ${factorial(num)}. `;
+            para.textContent += `${num} egy ilyen sugarú kör kerülete ${korkerulet(num)}. `;
+            para.textContent += `${num} egy ilyen sugarú kör területe ${korterulet(num)}. `;
         }
     });
   </script>
