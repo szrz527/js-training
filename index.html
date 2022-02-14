@@ -8,11 +8,14 @@
 </head>
 <body>
   <script>
-    let i = 0;
-    do {
-      i = prompt("Kérek egy számot!", 0);
+    let num = 10;
+    kovetkezo:
+    for (i = 2; i <= num; i++) {
+      for (j = 2; j < i; j++) {
+        if (i % j == 0) continue kovetkezo;
+      }
+      console.log(i);
     }
-    while (i <= 100 && i);
   </script>
 </body>
 </html>
