@@ -76,4 +76,22 @@ for (let prop in salaries) {
     console.log(sumsalary);
 }
 
-alert(sumsalary);
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+  };
+
+function multiplyNumeric(obj) {
+    for (let prop in menu) {
+        if (typeof menu[prop] == "number") {
+            menu[prop] *= 2;
+        }
+    }
+}
+
+multiplyNumeric(menu);
+
+for (let prop in menu) {
+    alert(menu[prop]);
+}
